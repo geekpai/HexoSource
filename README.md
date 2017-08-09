@@ -1,5 +1,5 @@
 # HexoSource
-<img src="https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true" alt="Project Badge" height="30" width="100">
+[![Build status](https://ci.appveyor.com/api/projects/status/i3q1cr6ptr9m5aw0?svg=true)](https://ci.appveyor.com/project/implement/hexosource)
 A repository for HexoSource.  
 
 
