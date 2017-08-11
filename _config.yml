@@ -92,8 +92,8 @@ deploy:
 # Algolia新增配置
 search: true
 algolia:
-  applicationID: 'N2IPAGUI5Y'
-  apiKey: '36ce0d9be53cbd42056589dcf9e4231a'
-  adminApiKey: '03caedffcb35907264dd6ba888d5b87e'
-  indexName: 'GeekPaiHexoIndex'
+  applicationID: '9M7OVPKHZN'
+  apiKey: 'ec1f1ac940db8352629d47898322e7f2'
+  adminApiKey: 'd7de902911b31d662c7a14cd495a5b3d'
+  indexName: 'GeekPaiIndex'
   chunkSize: 5000
