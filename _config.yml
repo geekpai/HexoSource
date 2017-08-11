@@ -93,7 +93,7 @@ deploy:
 search: true
 algolia:
   applicationID: 'N2IPAGUI5Y'
-  apiKey: '76fad4735741e3f83936f3187fdfe4fd'
+  apiKey: '36ce0d9be53cbd42056589dcf9e4231a'
   adminApiKey: '03caedffcb35907264dd6ba888d5b87e'
-  indexName: 'GeekPai-Hexo-Blog'
+  indexName: 'GeekPaiHexoIndex'
   chunkSize: 5000
