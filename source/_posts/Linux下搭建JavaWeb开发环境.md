@@ -1,5 +1,5 @@
 ---
-title: Web开发环境
+title: Linux下如何搭建 Java Web开发环境
 date: 2016-09-2 23:46:29
 tags: [aliyun,Linux]
 categories: Linux
@@ -8,6 +8,8 @@ categories: Linux
 ### Linux下如何搭建 Java Web开发环境 
 
 ​	这篇文章教大家如何在Linux环境下搭建Java Web开发环境，包括配置 JDK 、Tomcat 和 Mysql，验证版本为CentOS release 6.8，（查询版本信息：`cat /etc/issue`）仅供参考！
+
+<!-- more -->
 
 ### 一、安装 JDK
 
