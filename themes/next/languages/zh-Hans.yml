@@ -45,7 +45,7 @@ page:
   tags: 标签
 
 footer:
-  powered: "Thanks %s"
+  powered: "Thanks - %s"
   theme: Theme
 
 counter:

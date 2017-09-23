@@ -14,7 +14,7 @@ keywords: "Hexo, GeekPai"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2014
 
 # icon between year and author @Footer
 authoricon: heart
@@ -51,8 +51,8 @@ menu:
   categories: /categories
   tags: /tags
   #sitemap: /sitemap.xml
-  about: /about
-  commonweal: /404/404.html
+  #about: /about
+  #commonweal: /404/404.html
 
 # Enable/Disable menu icons.
 # Icon Mapping:
@@ -493,7 +493,7 @@ calendar:
 
 # Algolia Search
 algolia_search:
-  enable: true
+  enable: false
   hits:
     per_page: 10
   labels:
