@@ -7,6 +7,9 @@ categories: ReactNative
 
 ## Android集成ReactNative
 这篇教程是实践如何在Android原生代码中集成ReactNative，教程采用的react版本：`16.0.0`，react-native版本：`0.51.0`，编写时间：`2017.12.25`，内容仅供参考！
+
+<!-- more -->
+
 ### 准备工作
 
 > Android环境配置
@@ -15,7 +18,7 @@ categories: ReactNative
 
 ### 开始集成
 
-* 新建`package.json`到新创建的项目MixReactNative文件夹下，输入如下：
+1. 新建`package.json`到新创建的项目MixReactNative文件夹下，输入如下：
 
 ```json
 {
@@ -33,8 +36,8 @@ categories: ReactNative
   }
 }
 ```
-* 回到根目录执行`npm install`安装npm相关依赖
-* 创建`index.js`文件，输入如下：
+2. 回到根目录执行`npm install`安装npm相关依赖
+3. 创建`index.js`文件，输入如下：
 
 ```javascript
 import { AppRegistry } from 'react-native';
@@ -42,7 +45,7 @@ import App from './App';
 
 AppRegistry.registerComponent('MixReactNative', () => App);
 ```
-* 创建`App.js`文件，输入如下：
+4. 创建`App.js`文件，输入如下：
 ```javascript
 import React, {Component} from 'react';
 import {
@@ -99,8 +102,8 @@ const styles = StyleSheet.create({
     },
 });
 ```
-* 项目根目录下新建`android`文件夹，将原Android项目复制到该文件夹下
-* 修改Project下的`build.gradle`文件，参考如下：
+5. 项目根目录下新建`android`文件夹，将原Android项目复制到该文件夹下
+6. 修改Project下的`build.gradle`文件，参考如下：
 ```groovy
 buildscript {
    ......
@@ -115,7 +118,7 @@ allprojects {
 }
 ```
 > 注意：这里的url路径容易出错，需要留意是否是正确路径
-* 修改app下的`build.gradle`文件，参考如下：
+7. 修改app下的`build.gradle`文件，参考如下：
 
 ```groovy
 apply plugin: 'com.android.application'
@@ -156,7 +159,7 @@ dependencies {
     implementation "com.facebook.react:react-native:+" // From node_modules.
 }
 ```
-* 新建`MainApplication.java`文件继承`Application`并实现`ReactAppliaction`接口，输入如下:
+8. 新建`MainApplication.java`文件继承`Application`并实现`ReactAppliaction`接口，输入如下:
 
 ```java
 public class MainApplication extends Application implements ReactApplication {
@@ -193,9 +196,9 @@ public class MainApplication extends Application implements ReactApplication {
 }
 ```
 > 注意：记得修改AndroidManifest.xml文件中对应的位置
-* 新建一个继承`ReactActivity.java`的类，参考如下：
+9. 新建一个继承`ReactActivity.java`的类，参考如下：
 
-```
+```java
 public class ReactNativeActivity extends ReactActivity {
 
     private static final int OVERLAY_PERMISSION_REQ_CODE = 0000;
@@ -211,16 +214,18 @@ public class ReactNativeActivity extends ReactActivity {
 }
 ```
 > 注意：记得在AndroidManifest.xml文件中加入该Activity
-> ` <activity android:name=".ReactNativeActivity"/>`
-
-* 在AndroidManifest.xml文件中加入ReactNative用于调试开发的Activitty，输入如下：
-
+```xml
+<activity android:name=".ReactNativeActivity"/>
 ```
+
+10. 在AndroidManifest.xml文件中加入ReactNative用于调试开发的Activitty，输入如下：
+
+```xml
  <activity android:name="com.facebook.react.devsupport.DevSettingsActivity"/>
 ```
-* 在原生页面中编写跳转到`ReactNativeActivity`类的代码用于测试原生跳转RN页面是否正常，参考如下：
+11. 在原生页面中编写跳转到`ReactNativeActivity`类的代码用于测试原生跳转RN页面是否正常，参考如下：
 
-```
+```java
 public class MainActivity extends AppCompatActivity {
 
     private Button gotoRn;
@@ -238,4 +243,4 @@ public class MainActivity extends AppCompatActivity {
     }
 }
 ```
-* 至此代码集成基本就绪，项目根目录下执行`react-native start`开启服务，然后在`Android Studio`中连接设备并安装运行app，点击跳转到对应的RN页面后通过摇晃手机进入开发调试页，配置同一网络环境下的ip和端口号，然后重新加载页面，不出意外的话就会成功看到RN页面成功加载。
+12. 至此代码集成基本就绪，项目根目录下执行`react-native start`开启服务，然后在`Android Studio`中连接设备并安装运行app，点击跳转到对应的RN页面后通过摇晃手机进入开发调试页，配置同一网络环境下的ip和端口号，然后重新加载页面，不出意外的话就会成功看到RN页面成功加载。
